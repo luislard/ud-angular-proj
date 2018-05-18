@@ -11,8 +11,6 @@ export class DropdownDirective implements OnInit {
 
     constructor(){ }
     
-    isOpen = false;
-
     @HostListener('click') toogleOpen() {
         this.isOpen = !this.isOpen;
     }
