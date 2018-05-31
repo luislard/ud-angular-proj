@@ -76,8 +76,12 @@ export class RecipeEditComponent implements OnInit {
     } else {
       this.recipeService.addRecipe(this.recipeEditForm.value);
     }
-    this.router.navigate(['/recipes']);
+    this.router.navigate(['../'], {relativeTo: this.route});
     console.log(this.recipeEditForm);
+  }
+
+  onCancel(){
+    this.router.navigate(['../'], {relativeTo: this.route});
   }
 
   onAddIngredient(){
